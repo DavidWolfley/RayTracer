@@ -1,0 +1,11 @@
+# ninja log v5
+1	1425	7152999779674156	CMakeFiles/RayIsTracing.dir/main.cpp.obj	5f1685f8c925abe2
+1518	1684	7177185925419290	RayIsTracing.exe	c3b39df489e37468
+1	294	7180557344070409	build.ninja	c7dad5b2a5dec926
+4	1518	7177185923781797	CMakeFiles/RayIsTracing.dir/RayTracerMain.cpp.obj	48993f04ccc0755d
+30	1868	7180589094071384	CMakeFiles/RayIsTracing.dir/RayTracerMain.cpp.obj	48993f04ccc0755d
+1869	2291	7180589098290763	RayIsTracing.exe	c3b39df489e37468
+16	1773	7181407696152780	CMakeFiles/RayIsTracing.dir/RayTracerMain.cpp.obj	48993f04ccc0755d
+1774	2223	7181407700635913	RayIsTracing.exe	c3b39df489e37468
+6	2018	7181409879212294	CMakeFiles/RayIsTracing.dir/RayTracerMain.cpp.obj	48993f04ccc0755d
+2019	2221	7181409881211823	RayIsTracing.exe	c3b39df489e37468

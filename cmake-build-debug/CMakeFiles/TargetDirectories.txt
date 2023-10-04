@@ -1,0 +1,3 @@
+C:/Users/dwolf/CLionProjects/RayIsTracing/cmake-build-debug/CMakeFiles/RayIsTracing.dir
+C:/Users/dwolf/CLionProjects/RayIsTracing/cmake-build-debug/CMakeFiles/edit_cache.dir
+C:/Users/dwolf/CLionProjects/RayIsTracing/cmake-build-debug/CMakeFiles/rebuild_cache.dir
