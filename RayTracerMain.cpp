@@ -7,6 +7,7 @@
 #include "aarect.hpp"
 #include "texture.hpp"
 #include "rtw_stb_image.hpp"
+#include "quad.hpp"
 
  void random_spheres() {
     hittable_list world;
@@ -57,6 +58,7 @@
     cam.image_width       = 640;
     cam.samples_per_pixel = 10;
     cam.max_depth         = 50;
+    cam.background        = color(0.70, 0.80, 1.00);
 
     cam.vfov     = 20;
     cam.lookfrom = point3(13,2,3);
@@ -83,6 +85,7 @@ void two_spheres() {
     cam.image_width       = 400;
     cam.samples_per_pixel = 100;
     cam.max_depth         = 50;
+    cam.background        = color(0.70, 0.80, 1.00);
 
     cam.vfov     = 20;
     cam.lookfrom = point3(13,2,3);
@@ -105,6 +108,7 @@ void earth() {
     cam.image_width       = 400;
     cam.samples_per_pixel = 100;
     cam.max_depth         = 50;
+    cam.background        = color(0.70, 0.80, 1.00);
 
     cam.vfov     = 20;
     cam.lookfrom = point3(0,0,12);
@@ -129,6 +133,7 @@ void two_perlin_spheres() {
     cam.image_width       = 400;
     cam.samples_per_pixel = 100;
     cam.max_depth         = 50;
+    cam.background        = color(0.70, 0.80, 1.00);
 
     cam.vfov     = 20;
     cam.lookfrom = point3(13,2,3);
@@ -140,11 +145,47 @@ void two_perlin_spheres() {
     cam.render(world, 0, 0);
 }
 
+void quads() {
+    hittable_list world;
+
+    // Materials
+    auto left_red     = make_shared<lambertian>(color(1.0, 0.2, 0.2));
+    auto back_seafoam   = make_shared<lambertian>(color(0.1, 1.0, 0.4));
+    auto right_purple   = make_shared<lambertian>(color(0.328, 0.096, 1.0));
+    auto upper_orange = make_shared<lambertian>(color(1.0, 0.5, 0.0));
+    auto lower_teal   = make_shared<lambertian>(color(0.2, 0.8, 0.8));
+
+    // Quads
+    world.add(make_shared<quad>(point3(-3,-2, 5), vec3(0, 0,-4), vec3(0, 4, 0), left_red));
+    world.add(make_shared<quad>(point3(-2,-2, 0), vec3(4, 0, 0), vec3(0, 4, 0), back_seafoam));
+    world.add(make_shared<quad>(point3( 3,-2, 1), vec3(0, 0, 4), vec3(0, 4, 0), right_purple));
+    world.add(make_shared<quad>(point3(-2, 3, 1), vec3(4, 0, 0), vec3(0, 0, 4), upper_orange));
+    world.add(make_shared<quad>(point3(-2,-3, 5), vec3(4, 0, 0), vec3(0, 0,-4), lower_teal));
+
+    camera cam;
+
+    cam.aspect_ratio      = 1.0;
+    cam.image_width       = 400;
+    cam.samples_per_pixel = 100;
+    cam.max_depth         = 50;
+    cam.background        = color(0.4, 0.4, 0.6);
+
+    cam.vfov     = 80;
+    cam.lookfrom = point3(0,0,9);
+    cam.lookat   = point3(0,0,0);
+    cam.vup      = vec3(0,1,0);
+
+    cam.defocus_angle = 0;
+
+    cam.render(world, 0, 0);
+}
+
 int main() {
-    switch (4) {
+    switch (5) {
         case 1:  random_spheres();     break;
         case 2:  two_spheres();        break;
         case 3:  earth();              break;
         case 4:  two_perlin_spheres(); break;
+        case 5:  quads();              break;
     }
 }
