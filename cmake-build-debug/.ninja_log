@@ -1,23 +1,5 @@
 # ninja log v5
 1	1425	7152999779674156	CMakeFiles/RayIsTracing.dir/main.cpp.obj	5f1685f8c925abe2
-2356	2793	7205711540224946	RayIsTracing.exe	c3b39df489e37468
-1	294	7205720316177383	build.ninja	c7dad5b2a5dec926
-24	2355	7205711535783328	CMakeFiles/RayIsTracing.dir/RayTracerMain.cpp.obj	176a2ed3fd654baa
-9	3165	7205727245802933	CMakeFiles/RayIsTracing.dir/RayTracerMain.cpp.obj	176a2ed3fd654baa
-3166	3539	7205727249513466	RayIsTracing.exe	c3b39df489e37468
-7	2122	7205730411004758	CMakeFiles/RayIsTracing.dir/RayTracerMain.cpp.obj	176a2ed3fd654baa
-5	2157	7205731069726435	CMakeFiles/RayIsTracing.dir/RayTracerMain.cpp.obj	176a2ed3fd654baa
-4	2022	7205731608300201	CMakeFiles/RayIsTracing.dir/RayTracerMain.cpp.obj	176a2ed3fd654baa
-8	3529	7206509204742998	CMakeFiles/RayIsTracing.dir/RayTracerMain.cpp.obj	176a2ed3fd654baa
-3530	5329	7206509222764206	RayIsTracing.exe	c3b39df489e37468
-8	7443	7206513508466482	CMakeFiles/RayIsTracing.dir/RayTracerMain.cpp.obj	176a2ed3fd654baa
-7445	8277	7206513517042699	RayIsTracing.exe	c3b39df489e37468
-7	3667	7206514895928286	CMakeFiles/RayIsTracing.dir/RayTracerMain.cpp.obj	176a2ed3fd654baa
-3669	4010	7206514899424106	RayIsTracing.exe	c3b39df489e37468
-51	26542	7206549254805055	CMakeFiles/RayIsTracing.dir/RayTracerMain.cpp.obj	176a2ed3fd654baa
-26552	30598	7206549295216301	RayIsTracing.exe	c3b39df489e37468
-23	3294	7206553632951587	CMakeFiles/RayIsTracing.dir/RayTracerMain.cpp.obj	176a2ed3fd654baa
-3295	3661	7206553636628302	RayIsTracing.exe	c3b39df489e37468
-8	3094	7206555483182772	CMakeFiles/RayIsTracing.dir/RayTracerMain.cpp.obj	176a2ed3fd654baa
-7	3929	7206557505322915	CMakeFiles/RayIsTracing.dir/RayTracerMain.cpp.obj	176a2ed3fd654baa
-3930	4322	7206557509278763	RayIsTracing.exe	c3b39df489e37468
+3631	4017	7206567690648854	RayIsTracing.exe	c3b39df489e37468
+1	294	7206568682562579	build.ninja	c7dad5b2a5dec926
+7	3630	7206567686751739	CMakeFiles/RayIsTracing.dir/RayTracerMain.cpp.obj	176a2ed3fd654baa

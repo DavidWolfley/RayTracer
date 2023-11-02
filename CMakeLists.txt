@@ -18,7 +18,8 @@ add_executable(RayIsTracing RayTracerMain.cpp
         aabb.hpp
         bvh.hpp
         texture.hpp
-        rtw_stb_image.hpp)
+        rtw_stb_image.hpp
+        quad.hpp)
 
 find_package(OpenMP REQUIRED)
 
