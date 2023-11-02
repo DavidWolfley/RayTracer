@@ -3,11 +3,14 @@
 
 #include "ray.hpp"
 #include "rtweekend.hpp"
+#include "aabb.hpp"
 
 class material;
 
 class hit_record {
 public:
+    double u;
+    double v;
     point3 p;
     vec3 normal;
     double t;
@@ -28,6 +31,8 @@ public:
     virtual ~hittable() = default;
 
     virtual bool hit(const ray& r, interval ray_t, hit_record& rec) const = 0;
+
+    virtual aabb bounding_box() const = 0;
 };
 
 #endif

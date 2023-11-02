@@ -14,4 +14,16 @@ add_executable(RayIsTracing RayTracerMain.cpp
         interval.hpp
         camera.hpp
         material.hpp
-        aarect.hpp)
+        aarect.hpp
+        aabb.hpp
+        bvh.hpp
+        texture.hpp
+        rtw_stb_image.hpp)
+
+find_package(OpenMP REQUIRED)
+
+if(OpenMP_CXX_FOUND)
+    target_link_libraries(RayIsTracing OpenMP::OpenMP_CXX)
+else()
+    target_link_libraries(RayIsTracing)
+endif()
