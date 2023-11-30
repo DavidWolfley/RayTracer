@@ -1,6 +1,7 @@
 #ifndef BVH_HPP
 #define BVH_HPP
 
+#include <algorithm>
 #include "rtweekend.hpp"
 
 #include "hittable.hpp"
