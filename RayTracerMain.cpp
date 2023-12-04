@@ -301,7 +301,8 @@ void cornell_smoke() {
 
 void final_scene(int image_width, int samples_per_pixel, int max_depth) {
     hittable_list boxes1;
-    auto ground = make_shared<lambertian>(color(0.48, 0.83, 0.53));
+    auto checker = make_shared<checker_texture>(0.8, color(.99, 0, .86), color(0, 0, 0));
+    auto ground = make_shared<lambertian>(color(0.32, 0.09, 0.98));
 
     int boxes_per_side = 20;
     for (int i = 0; i < boxes_per_side; i++) {
@@ -322,7 +323,7 @@ void final_scene(int image_width, int samples_per_pixel, int max_depth) {
 
     world.add(make_shared<bvh_node>(boxes1));
 
-    auto light = make_shared<diffuse_light>(color(7, 7, 7));
+    auto light = make_shared<diffuse_light>(color(7, 6, 6));
     world.add(make_shared<quad>(point3(123,554,147), vec3(300,0,0), vec3(0,0,265), light));
 
     auto center1 = point3(400, 400, 200);
@@ -341,16 +342,16 @@ void final_scene(int image_width, int samples_per_pixel, int max_depth) {
     boundary = make_shared<sphere>(point3(0,0,0), 5000, make_shared<dielectric>(1.5));
     world.add(make_shared<constant_medium>(boundary, .0001, color(1,1,1)));
 
-    auto emat = make_shared<lambertian>(make_shared<image_texture>("earthmap.jpg"));
-    world.add(make_shared<sphere>(point3(400,200,400), 100, emat));
+    auto tex1 = make_shared<lambertian>(make_shared<image_texture>("latlon-base-map.png"));
+    world.add(make_shared<sphere>(point3(400,200,400), 100, tex1));
     auto pertext = make_shared<noise_texture>(0.1);
     world.add(make_shared<sphere>(point3(220,280,300), 80, make_shared<lambertian>(pertext)));
 
     hittable_list boxes2;
-    auto white = make_shared<lambertian>(color(.73, .73, .73));
+    auto tex2 = make_shared<lambertian>(make_shared<image_texture>("latlon-base-map.png"));
     int ns = 1000;
     for (int j = 0; j < ns; j++) {
-        boxes2.add(make_shared<sphere>(point3::random(0,165), 10, white));
+        boxes2.add(make_shared<sphere>(point3::random(0,165), 10, tex2));
     }
 
     world.add(make_shared<translate>(
@@ -390,6 +391,6 @@ int main() {
         case 7:  cornell_box();               break;
         case 8:  cornell_smoke();             break;
         case 9:  final_scene(800, 10000, 40); break;
-        default: final_scene(400,   5,  4); break;
+        default: final_scene(800,   10000,  40); break;
     }
 }
